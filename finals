@@ -1,0 +1,23 @@
+def getNames(siblings):
+    for i in range(1, siblings + 1):
+        #asking for name of ith sibling
+        print("What's the name of your #{}".format(i), "sibling? ",end='')
+        #read name of ith sibling
+        name = input()
+    return
+def main():
+    print("How many brothers and sisters do you have? ", end='')
+    siblings = int(input())
+    #printing appropriate output when siblings is negative
+    if siblings < 0:
+        print("How could that be?")
+    elif siblings == 0:
+        print("Oh, you were an only child!")
+        print("Sounds like a nice size family")
+        getNames(siblings)
+    else:
+        print("A big family!")
+        getNames(siblings)
+    return
+
+main()
